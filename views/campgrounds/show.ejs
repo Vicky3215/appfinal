@@ -1,8 +1,10 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/stylesheets/starability.css">
 
+
+
 <div class="row">
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
         <div class="card mb-3">
             <img src="<%= campground.image%>" class="card-img-top" alt="...">
             <div class="card-body">
@@ -28,7 +30,8 @@
         </div>
 
     </div>
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
+        <h1 class="font-weight-bold">Reviews:-</h1>
         <% if(currentUser){ %>
         <h2>Leave a Review</h2>
         <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
