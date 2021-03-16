@@ -32,6 +32,10 @@
     </div>
     <div class="col-md-6 col-sm-12">
         <h1 class="font-weight-bold">Reviews:-</h1>
+       <%if(!currentUser){%>
+        <h4 class="mb-4">Login to create a review</h4>
+
+       <%}%>
         <% if(currentUser){ %>
         <h2>Leave a Review</h2>
         <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
